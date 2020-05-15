@@ -6,7 +6,7 @@ pipeline {
             steps {
                 withAWS(region:'eu-central-1',credentials:'aws-static') {
                 sh 'echo "Uploading content with AWS creds"'
-                    s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'s3-bucket-ucdn-jenkins')
+                    s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'ucdn-jenkins')
                 }
             }
         }
